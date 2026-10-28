@@ -1,0 +1,51 @@
+{
+  "id": "3554754",
+  "name": "1232",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "798247",
+      "name": "emi成功",
+      "font_class": "emichenggong",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "1425950",
+      "name": "添加成功",
+      "font_class": "tianjiachenggong",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "9138875",
+      "name": "成功",
+      "font_class": "chenggong",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "7159311",
+      "name": "标签",
+      "font_class": "biaoqian",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "7542760",
+      "name": "24gf-tags3",
+      "font_class": "24gf-tags3",
+      "unicode": "e886",
+      "unicode_decimal": 59526
+    },
+    {
+      "icon_id": "15732844",
+      "name": "挖土机-挖掘机-铲车",
+      "font_class": "watuji-wajueji-chanche",
+      "unicode": "e704",
+      "unicode_decimal": 59140
+    }
+  ]
+}

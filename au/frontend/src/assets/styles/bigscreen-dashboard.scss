@@ -1,0 +1,666 @@
+/* Dashboard final theme. Loaded after the light agriculture theme on purpose. */
+
+$screen-bg: #04101d;
+$panel-bg: rgba(5, 22, 39, 0.96);
+$panel-bg-strong: rgba(4, 18, 32, 0.98);
+$panel-line: rgba(66, 205, 255, 0.30);
+$panel-line-soft: rgba(66, 205, 255, 0.16);
+$text-strong: #f2fbff;
+$text: #d8f4ff;
+$text-muted: #96c8dd;
+$cyan: #43d7ff;
+$green: #5dffba;
+
+body:has(.rice-screen.rice-bigscreen),
+#app:has(.rice-screen.rice-bigscreen),
+#app .top-layout:has(.rice-screen.rice-bigscreen),
+#app .top-layout .main-container:has(.rice-screen.rice-bigscreen),
+#app .top-layout .app-main:has(.rice-screen.rice-bigscreen) {
+  color: $text !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(48, 172, 235, 0.22), transparent 32%),
+    linear-gradient(180deg, #04101d 0%, #061827 48%, #020b14 100%) !important;
+  background-color: $screen-bg !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen {
+  min-height: calc(100vh - 64px) !important;
+  padding: 10px !important;
+  color: $text !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(67, 215, 255, 0.20), transparent 30%),
+    radial-gradient(circle at 8% 18%, rgba(93, 255, 186, 0.13), transparent 28%),
+    linear-gradient(180deg, #04101d 0%, #061827 46%, #020b14 100%) !important;
+  background-color: $screen-bg !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen::before {
+  opacity: 0.75 !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen,
+#app .top-layout .rice-screen.rice-bigscreen .bigscreen-shell,
+#app .top-layout .rice-screen.rice-bigscreen .screen-body,
+#app .top-layout .rice-screen.rice-bigscreen .screen-center,
+#app .top-layout .rice-screen.rice-bigscreen .screen-side {
+  border-color: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .bigscreen-shell {
+  gap: 10px !important;
+  padding: 0 !important;
+  background:
+    linear-gradient(rgba(87, 214, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(87, 214, 255, 0.035) 1px, transparent 1px) !important;
+  background-size: 36px 36px !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .screen-header {
+  min-height: 48px !important;
+  padding: 6px 14px !important;
+  border: 1px solid $panel-line !important;
+  border-radius: 6px !important;
+  color: $text-strong !important;
+  background:
+    linear-gradient(90deg, rgba(4, 18, 35, 0.98), rgba(8, 41, 65, 0.90), rgba(4, 18, 35, 0.98)) !important;
+  box-shadow:
+    inset 0 0 24px rgba(67, 215, 255, 0.10),
+    0 8px 24px rgba(0, 0, 0, 0.26) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .screen-title {
+  width: min(560px, 46vw) !important;
+  height: 34px !important;
+  border: 1px solid rgba(120, 232, 255, 0.42) !important;
+  border-radius: 999px !important;
+  background:
+    linear-gradient(90deg, transparent, rgba(67, 215, 255, 0.20), transparent),
+    rgba(6, 28, 50, 0.88) !important;
+  box-shadow:
+    inset 0 0 16px rgba(67, 215, 255, 0.18),
+    0 0 18px rgba(93, 255, 186, 0.10) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .screen-title h1 {
+  color: $text-strong !important;
+  font-size: 22px !important;
+  line-height: 34px !important;
+  text-shadow:
+    0 0 10px rgba(67, 215, 255, 0.72),
+    0 0 18px rgba(93, 255, 186, 0.32) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .admin-entry,
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-panel .map-filters .el-button,
+#app .top-layout .rice-screen.rice-bigscreen .environment-refresh-button {
+  border-color: rgba(67, 215, 255, 0.56) !important;
+  color: #ffffff !important;
+  background: linear-gradient(180deg, #1597df, #075f9f) !important;
+  box-shadow: 0 0 18px rgba(21, 151, 223, 0.28) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .kpi-strip {
+  gap: 10px !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .kpi-card {
+  min-height: 64px !important;
+  border: 1px solid rgba(67, 215, 255, 0.26) !important;
+  border-radius: 6px !important;
+  color: $text !important;
+  background:
+    linear-gradient(180deg, rgba(8, 37, 61, 0.94), rgba(5, 22, 39, 0.98)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(152, 236, 255, 0.12),
+    inset 0 -18px 32px rgba(43, 146, 209, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.22) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .kpi-card span {
+  color: $text-muted !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .kpi-card strong {
+  color: $green !important;
+  text-shadow: 0 0 14px rgba(93, 255, 186, 0.42) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .kpi-card small {
+  color: $text !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .screen-side .panel,
+#app .top-layout .rice-screen.rice-bigscreen .screen-center .panel,
+#app .top-layout .rice-screen.rice-bigscreen .right-side .panel,
+#app .top-layout .rice-screen.rice-bigscreen .side-panel,
+#app .top-layout .rice-screen.rice-bigscreen .source-panel,
+#app .top-layout .rice-screen.rice-bigscreen .task-panel,
+#app .top-layout .rice-screen.rice-bigscreen .environment-dashboard-panel,
+#app .top-layout .rice-screen.rice-bigscreen .environment-metric-panel,
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-panel {
+  border: 1px solid $panel-line !important;
+  border-radius: 6px !important;
+  color: $text !important;
+  background:
+    linear-gradient(145deg, rgba(6, 27, 48, 0.96), rgba(4, 18, 32, 0.99)) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025),
+    inset 0 0 34px rgba(43, 146, 209, 0.08),
+    0 10px 28px rgba(0, 0, 0, 0.25) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .panel-title,
+#app .top-layout .rice-screen.rice-bigscreen .environment-dashboard-header,
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-panel .map-head,
+#app .top-layout .rice-screen.rice-bigscreen .environment-chart-title {
+  position: relative !important;
+  z-index: 1200 !important;
+  border-color: $panel-line-soft !important;
+  color: $text-strong !important;
+  background: linear-gradient(90deg, rgba(12, 58, 91, 0.62), rgba(5, 24, 42, 0.24)) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen :is(.panel-title-main strong, .panel-title strong, .map-title h2, .environment-chart-title strong) {
+  color: $text-strong !important;
+  text-shadow: 0 0 10px rgba(67, 215, 255, 0.24) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen :is(.panel-title-extra, .map-title p, .empty-data, .environment-chart-title small, .environment-chart-title > span) {
+  color: $text-muted !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-panel .map-filters,
+#app .top-layout .rice-screen.rice-bigscreen .environment-global-controls {
+  position: relative !important;
+  z-index: 1201 !important;
+  pointer-events: auto !important;
+  border-color: $panel-line-soft !important;
+  background: rgba(3, 17, 31, 0.52) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-panel .map-filters {
+  grid-template-columns: 236px 170px minmax(180px, 1fr) 94px !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-basemap-switch {
+  display: inline-flex !important;
+  min-width: 0;
+  padding: 3px;
+  border: 1px solid rgba(67, 215, 255, 0.26);
+  border-radius: 8px;
+  background: rgba(2, 12, 22, 0.78);
+  box-shadow: inset 0 0 14px rgba(67, 215, 255, 0.05);
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-basemap-switch .el-radio-button__inner {
+  min-width: 68px;
+  height: 26px;
+  padding: 0 10px;
+  border: 0 !important;
+  border-radius: 6px !important;
+  color: $text !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-basemap-switch .el-radio-button__original-radio:checked + .el-radio-button__inner {
+  color: #ffffff !important;
+  background: linear-gradient(180deg, #1597df, #075f9f) !important;
+  box-shadow: 0 0 14px rgba(67, 215, 255, 0.24) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen :is(.el-input__wrapper, .el-select__wrapper),
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-panel .map-filters :is(.el-input__wrapper, .el-select__wrapper),
+#app .top-layout .rice-screen.rice-bigscreen .environment-global-controls :is(.el-input__wrapper, .el-select__wrapper),
+#app .top-layout .rice-screen.rice-bigscreen :is(.environment-control-status, .environment-control-time) {
+  border: 1px solid rgba(67, 215, 255, 0.22) !important;
+  color: $text !important;
+  background: rgba(3, 17, 31, 0.90) !important;
+  box-shadow: inset 0 0 0 1px rgba(93, 255, 186, 0.05) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen :is(.el-input__inner, .el-select__selected-item, .el-select__placeholder, .el-select__caret, .el-input__icon) {
+  color: $text !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-stage,
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-leaflet-map,
+#app .top-layout .rice-screen.rice-bigscreen .environment-chart-grid,
+#app .top-layout .rice-screen.rice-bigscreen .environment-metric-content {
+  position: relative !important;
+  z-index: 1 !important;
+  border-color: $panel-line-soft !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(22, 115, 142, 0.18), transparent 38%),
+    #061524 !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(67, 215, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 215, 255, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .environment-chart-cell,
+#app .top-layout .rice-screen.rice-bigscreen .environment-device-summary,
+#app .top-layout .rice-screen.rice-bigscreen .selected-environment-metric,
+#app .top-layout .rice-screen.rice-bigscreen .source-list article,
+#app .top-layout .rice-screen.rice-bigscreen .task-list article,
+#app .top-layout .rice-screen.rice-bigscreen .empty-data {
+  border-color: rgba(67, 215, 255, 0.18) !important;
+  color: $text !important;
+  background:
+    linear-gradient(145deg, rgba(8, 35, 59, 0.78), rgba(3, 17, 31, 0.94)) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .selected-environment-metric > span,
+#app .top-layout .rice-screen.rice-bigscreen .environment-device-identity small,
+#app .top-layout .rice-screen.rice-bigscreen .source-list small,
+#app .top-layout .rice-screen.rice-bigscreen .source-list time {
+  color: $text-muted !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .environment-device-identity strong,
+#app .top-layout .rice-screen.rice-bigscreen .source-list strong {
+  color: $text-strong !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-legend,
+#app .top-layout .rice-screen.rice-bigscreen .leaflet-control-zoom,
+#app .top-layout .rice-screen.rice-bigscreen .leaflet-control-zoom a,
+#app .top-layout .rice-screen.rice-bigscreen .leaflet-control-attribution,
+#app .top-layout .rice-screen.rice-bigscreen .leaflet-popup-content-wrapper,
+#app .top-layout .rice-screen.rice-bigscreen .leaflet-popup-tip,
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-base-marker b,
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-node-marker b,
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-plot-label {
+  border-color: rgba(67, 215, 255, 0.30) !important;
+  color: #e9fbff !important;
+  background: rgba(3, 17, 31, 0.90) !important;
+  box-shadow: 0 0 18px rgba(67, 215, 255, 0.12) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-base-marker,
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-node-marker {
+  color: $text-strong !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .leaflet-tile-pane {
+  filter: invert(0.86) hue-rotate(175deg) saturate(1.30) contrast(0.92) brightness(1.18) !important;
+  opacity: 0.92 !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-stage.basemap-terrain .leaflet-tile-pane,
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-stage.basemap-vector .leaflet-tile-pane {
+  filter: saturate(1.06) contrast(1.02) brightness(0.96) !important;
+  opacity: 0.98 !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-stage.basemap-satellite .leaflet-tile-pane {
+  filter: saturate(1.08) contrast(1.04) brightness(0.88) !important;
+  opacity: 0.98 !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen :is(.disease-result, .ndvi-panel, .empty-tip, .empty-state) {
+  color: $text-muted !important;
+  border-color: rgba(67, 215, 255, 0.18) !important;
+  background: rgba(3, 17, 31, 0.42) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen *::-webkit-scrollbar-track {
+  background: rgba(3, 17, 31, 0.88) !important;
+}
+
+#app .top-layout .rice-screen.rice-bigscreen *::-webkit-scrollbar-thumb {
+  background: rgba(67, 215, 255, 0.42) !important;
+}
+
+/* Public dashboard route does not always sit under .top-layout. */
+#app .rice-screen.rice-bigscreen {
+  min-height: 100vh !important;
+  padding: 10px !important;
+  color: $text !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(67, 215, 255, 0.20), transparent 30%),
+    radial-gradient(circle at 8% 18%, rgba(93, 255, 186, 0.13), transparent 28%),
+    linear-gradient(180deg, #04101d 0%, #061827 46%, #020b14 100%) !important;
+  background-color: $screen-bg !important;
+}
+
+#app .rice-screen.rice-bigscreen,
+#app .rice-screen.rice-bigscreen .bigscreen-shell,
+#app .rice-screen.rice-bigscreen .screen-body,
+#app .rice-screen.rice-bigscreen .screen-center,
+#app .rice-screen.rice-bigscreen .screen-side {
+  border-color: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+#app .rice-screen.rice-bigscreen .bigscreen-shell {
+  gap: 10px !important;
+  padding: 0 !important;
+  background:
+    linear-gradient(rgba(87, 214, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(87, 214, 255, 0.035) 1px, transparent 1px) !important;
+  background-size: 36px 36px !important;
+}
+
+#app .rice-screen.rice-bigscreen .screen-header,
+#app .rice-screen.rice-bigscreen .kpi-card,
+#app .rice-screen.rice-bigscreen .screen-side .panel,
+#app .rice-screen.rice-bigscreen .screen-center .panel,
+#app .rice-screen.rice-bigscreen .right-side .panel,
+#app .rice-screen.rice-bigscreen .side-panel,
+#app .rice-screen.rice-bigscreen .source-panel,
+#app .rice-screen.rice-bigscreen .task-panel,
+#app .rice-screen.rice-bigscreen .environment-dashboard-panel,
+#app .rice-screen.rice-bigscreen .environment-metric-panel,
+#app .rice-screen.rice-bigscreen .dashboard-map-panel {
+  border: 1px solid $panel-line !important;
+  border-radius: 6px !important;
+  color: $text !important;
+  background:
+    linear-gradient(145deg, rgba(6, 27, 48, 0.96), rgba(4, 18, 32, 0.99)) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025),
+    inset 0 0 34px rgba(43, 146, 209, 0.08),
+    0 10px 28px rgba(0, 0, 0, 0.25) !important;
+}
+
+#app .rice-screen.rice-bigscreen .screen-header {
+  min-height: 48px !important;
+  padding: 6px 14px !important;
+  background:
+    linear-gradient(90deg, rgba(4, 18, 35, 0.98), rgba(8, 41, 65, 0.90), rgba(4, 18, 35, 0.98)) !important;
+}
+
+#app .rice-screen.rice-bigscreen .screen-title {
+  width: min(560px, 46vw) !important;
+  height: 34px !important;
+  border: 1px solid rgba(120, 232, 255, 0.42) !important;
+  border-radius: 999px !important;
+  background:
+    linear-gradient(90deg, transparent, rgba(67, 215, 255, 0.20), transparent),
+    rgba(6, 28, 50, 0.88) !important;
+  box-shadow:
+    inset 0 0 16px rgba(67, 215, 255, 0.18),
+    0 0 18px rgba(93, 255, 186, 0.10) !important;
+}
+
+#app .rice-screen.rice-bigscreen .screen-title h1 {
+  color: $text-strong !important;
+  font-size: 22px !important;
+  line-height: 34px !important;
+  text-shadow:
+    0 0 10px rgba(67, 215, 255, 0.72),
+    0 0 18px rgba(93, 255, 186, 0.32) !important;
+}
+
+#app .rice-screen.rice-bigscreen .kpi-card {
+  min-height: 64px !important;
+  background:
+    linear-gradient(180deg, rgba(8, 37, 61, 0.94), rgba(5, 22, 39, 0.98)) !important;
+}
+
+#app .rice-screen.rice-bigscreen .kpi-card span,
+#app .rice-screen.rice-bigscreen :is(.panel-title-extra, .map-title p, .empty-data, .environment-chart-title small, .environment-chart-title > span) {
+  color: $text-muted !important;
+}
+
+#app .rice-screen.rice-bigscreen .kpi-card strong {
+  color: $green !important;
+  text-shadow: 0 0 14px rgba(93, 255, 186, 0.42) !important;
+}
+
+#app .rice-screen.rice-bigscreen .kpi-card small,
+#app .rice-screen.rice-bigscreen :is(.panel-title-main strong, .panel-title strong, .environment-chart-title strong) {
+  color: $text-strong !important;
+}
+
+#app .rice-screen.rice-bigscreen .panel-title,
+#app .rice-screen.rice-bigscreen .environment-dashboard-header,
+#app .rice-screen.rice-bigscreen .dashboard-map-panel .map-head,
+#app .rice-screen.rice-bigscreen .environment-chart-title {
+  position: relative !important;
+  z-index: 1200 !important;
+  border-color: $panel-line-soft !important;
+  color: $text-strong !important;
+  background: linear-gradient(90deg, rgba(12, 58, 91, 0.62), rgba(5, 24, 42, 0.24)) !important;
+}
+
+#app .rice-screen.rice-bigscreen .dashboard-map-panel .map-filters,
+#app .rice-screen.rice-bigscreen .environment-global-controls {
+  position: relative !important;
+  z-index: 1201 !important;
+  pointer-events: auto !important;
+  border-color: $panel-line-soft !important;
+  background: rgba(3, 17, 31, 0.52) !important;
+}
+
+#app .rice-screen.rice-bigscreen .dashboard-map-panel .map-filters {
+  grid-template-columns: 236px 170px minmax(180px, 1fr) 94px !important;
+}
+
+#app .rice-screen.rice-bigscreen .dashboard-basemap-switch {
+  display: inline-flex !important;
+  min-width: 0;
+  padding: 3px;
+  border: 1px solid rgba(67, 215, 255, 0.26);
+  border-radius: 8px;
+  background: rgba(2, 12, 22, 0.78);
+  box-shadow: inset 0 0 14px rgba(67, 215, 255, 0.05);
+}
+
+#app .rice-screen.rice-bigscreen .dashboard-basemap-switch .el-radio-button__inner {
+  min-width: 68px;
+  height: 26px;
+  padding: 0 10px;
+  border: 0 !important;
+  border-radius: 6px !important;
+  color: $text !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+#app .rice-screen.rice-bigscreen .dashboard-basemap-switch .el-radio-button__original-radio:checked + .el-radio-button__inner {
+  color: #ffffff !important;
+  background: linear-gradient(180deg, #1597df, #075f9f) !important;
+  box-shadow: 0 0 14px rgba(67, 215, 255, 0.24) !important;
+}
+
+#app .rice-screen.rice-bigscreen :is(.el-input__wrapper, .el-select__wrapper),
+#app .rice-screen.rice-bigscreen .dashboard-map-panel .map-filters :is(.el-input__wrapper, .el-select__wrapper),
+#app .rice-screen.rice-bigscreen .environment-global-controls :is(.el-input__wrapper, .el-select__wrapper),
+#app .rice-screen.rice-bigscreen :is(.environment-control-status, .environment-control-time) {
+  border: 1px solid rgba(67, 215, 255, 0.22) !important;
+  color: $text !important;
+  background: rgba(3, 17, 31, 0.90) !important;
+  box-shadow: inset 0 0 0 1px rgba(93, 255, 186, 0.05) !important;
+}
+
+#app .rice-screen.rice-bigscreen :is(.el-input__inner, .el-select__selected-item, .el-select__placeholder, .el-select__caret, .el-input__icon) {
+  color: $text !important;
+}
+
+#app .rice-screen.rice-bigscreen .admin-entry,
+#app .rice-screen.rice-bigscreen .dashboard-map-panel .map-filters .el-button,
+#app .rice-screen.rice-bigscreen .environment-refresh-button {
+  border-color: rgba(67, 215, 255, 0.56) !important;
+  color: #ffffff !important;
+  background: linear-gradient(180deg, #1597df, #075f9f) !important;
+  box-shadow: 0 0 18px rgba(21, 151, 223, 0.28) !important;
+}
+
+#app .rice-screen.rice-bigscreen .dashboard-map-stage,
+#app .rice-screen.rice-bigscreen .dashboard-leaflet-map,
+#app .rice-screen.rice-bigscreen .environment-chart-grid,
+#app .rice-screen.rice-bigscreen .environment-metric-content {
+  position: relative !important;
+  z-index: 1 !important;
+  border-color: $panel-line-soft !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(22, 115, 142, 0.18), transparent 38%),
+    #061524 !important;
+}
+
+#app .rice-screen.rice-bigscreen .environment-chart-cell,
+#app .rice-screen.rice-bigscreen .environment-device-summary,
+#app .rice-screen.rice-bigscreen .selected-environment-metric,
+#app .rice-screen.rice-bigscreen .source-list article,
+#app .rice-screen.rice-bigscreen .task-list article,
+#app .rice-screen.rice-bigscreen .empty-data {
+  border-color: rgba(67, 215, 255, 0.18) !important;
+  color: $text !important;
+  background:
+    linear-gradient(145deg, rgba(8, 35, 59, 0.78), rgba(3, 17, 31, 0.94)) !important;
+}
+
+#app .rice-screen.rice-bigscreen .dashboard-map-legend,
+#app .rice-screen.rice-bigscreen .leaflet-control-zoom,
+#app .rice-screen.rice-bigscreen .leaflet-control-zoom a,
+#app .rice-screen.rice-bigscreen .leaflet-control-attribution,
+#app .rice-screen.rice-bigscreen .leaflet-popup-content-wrapper,
+#app .rice-screen.rice-bigscreen .leaflet-popup-tip,
+#app .rice-screen.rice-bigscreen .dashboard-base-marker b,
+#app .rice-screen.rice-bigscreen .dashboard-node-marker b,
+#app .rice-screen.rice-bigscreen .dashboard-plot-label {
+  border-color: rgba(67, 215, 255, 0.30) !important;
+  color: #e9fbff !important;
+  background: rgba(3, 17, 31, 0.90) !important;
+  box-shadow: 0 0 18px rgba(67, 215, 255, 0.12) !important;
+}
+
+#app .rice-screen.rice-bigscreen .leaflet-tile-pane {
+  filter: invert(0.86) hue-rotate(175deg) saturate(1.30) contrast(0.92) brightness(1.18) !important;
+  opacity: 0.92 !important;
+}
+
+#app .rice-screen.rice-bigscreen .dashboard-map-stage.basemap-terrain .leaflet-tile-pane,
+#app .rice-screen.rice-bigscreen .dashboard-map-stage.basemap-vector .leaflet-tile-pane {
+  filter: saturate(1.06) contrast(1.02) brightness(0.96) !important;
+  opacity: 0.98 !important;
+}
+
+#app .rice-screen.rice-bigscreen .dashboard-map-stage.basemap-satellite .leaflet-tile-pane {
+  filter: saturate(1.08) contrast(1.04) brightness(0.88) !important;
+  opacity: 0.98 !important;
+}
+
+/* Final layout alignment: keep left, center and right columns on one baseline. */
+#app .rice-screen.rice-bigscreen .screen-body,
+#app .top-layout .rice-screen.rice-bigscreen .screen-body {
+  display: grid !important;
+  grid-template-columns: 292px minmax(0, 1fr) 360px !important;
+  align-items: stretch !important;
+  gap: 10px !important;
+  min-height: calc(100vh - 154px) !important;
+  padding: 0 !important;
+}
+
+#app .rice-screen.rice-bigscreen .screen-side,
+#app .rice-screen.rice-bigscreen .screen-center,
+#app .top-layout .rice-screen.rice-bigscreen .screen-side,
+#app .top-layout .rice-screen.rice-bigscreen .screen-center {
+  display: grid !important;
+  align-self: stretch !important;
+  align-items: stretch !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  padding: 0 !important;
+  gap: 10px !important;
+}
+
+#app .rice-screen.rice-bigscreen .left-side,
+#app .top-layout .rice-screen.rice-bigscreen .left-side {
+  grid-template-rows: 188px 188px minmax(0, 1fr) !important;
+}
+
+#app .rice-screen.rice-bigscreen .screen-center,
+#app .top-layout .rice-screen.rice-bigscreen .screen-center {
+  grid-template-rows: minmax(0, 1fr) 310px !important;
+}
+
+#app .rice-screen.rice-bigscreen .right-side,
+#app .top-layout .rice-screen.rice-bigscreen .right-side {
+  grid-template-rows: 335px 178px minmax(0, 1fr) !important;
+}
+
+#app .rice-screen.rice-bigscreen .right-side.has-task-panel,
+#app .top-layout .rice-screen.rice-bigscreen .right-side.has-task-panel {
+  grid-template-rows: 330px 150px 104px minmax(0, 1fr) !important;
+}
+
+#app .rice-screen.rice-bigscreen .screen-side > .panel,
+#app .rice-screen.rice-bigscreen .screen-center > .panel,
+#app .rice-screen.rice-bigscreen .screen-chart-row > .panel,
+#app .top-layout .rice-screen.rice-bigscreen .screen-side > .panel,
+#app .top-layout .rice-screen.rice-bigscreen .screen-center > .panel,
+#app .top-layout .rice-screen.rice-bigscreen .screen-chart-row > .panel {
+  align-self: stretch !important;
+  min-height: 0 !important;
+}
+
+#app .rice-screen.rice-bigscreen .screen-chart-row,
+#app .top-layout .rice-screen.rice-bigscreen .screen-chart-row {
+  display: grid !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  align-self: stretch !important;
+}
+
+#app .rice-screen.rice-bigscreen .dashboard-map-panel,
+#app .top-layout .rice-screen.rice-bigscreen .dashboard-map-panel {
+  min-height: 0 !important;
+}
+
+@media (max-width: 1500px) {
+  #app .rice-screen.rice-bigscreen .screen-body,
+  #app .top-layout .rice-screen.rice-bigscreen .screen-body {
+    grid-template-columns: 292px minmax(0, 1fr) 354px !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  #app .rice-screen.rice-bigscreen .screen-body,
+  #app .top-layout .rice-screen.rice-bigscreen .screen-body {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+}
+
+/* The right column now contains two content panels below the environment metrics. */
+#app .rice-screen.rice-bigscreen .right-side.has-task-panel,
+#app .top-layout .rice-screen.rice-bigscreen .right-side.has-task-panel {
+  grid-template-rows: 330px minmax(0, 1fr) minmax(0, 1fr) !important;
+}
+
+#app .rice-screen.rice-bigscreen .right-side .ndvi-panel,
+#app .top-layout .rice-screen.rice-bigscreen .right-side .ndvi-panel {
+  display: grid !important;
+  grid-template-rows: 38px minmax(0, 1fr) !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+#app .rice-screen.rice-bigscreen .right-side .ndvi-panel .trend-chart.small,
+#app .top-layout .rice-screen.rice-bigscreen .right-side .ndvi-panel .trend-chart.small {
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 8px 8px !important;
+}

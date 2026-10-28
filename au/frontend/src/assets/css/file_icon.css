@@ -1,0 +1,175 @@
+
+
+.drawing_card {
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin-top: 15px;
+    overflow: auto;
+    box-shadow: 0 5px 5px rgb(0 0 0 /10%);
+    transition: all 0.9s;
+    border-radius: 10px;
+}
+
+.folderContainer {
+    width: 150px;
+    float: left;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.folder {
+    width: 110px;
+    height: 80px;
+    perspective: 600px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.folderWrapper {
+    width: 150px;
+    height: 130px;
+    padding: 20px 20px 10px 20px;
+    position: relative;
+    transition: all .2s ease;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.folderWrapper:hover {
+    background-color: rgba(38, 153, 82, 0.09);
+}
+
+.folder div.back, .folder div.front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 80px;
+    background-color: #4db36d;
+}
+
+.folder div.center {
+    width: 90px;
+    height: 60px;
+    background-color: rgba(240, 252, 244, 0.96);
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+.folder .front {
+    background-image: linear-gradient(to left, #63c77e 0%, #35a85d 48%, #168447 100%);
+    border-radius: 6px;
+    z-index: 3;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.25) inset, 0 -2px 2px rgba(0, 0, 0, 0.1);
+    transform: rotateX(-30deg);
+    transform-origin: bottom;
+    transition: all .2s ease;
+
+}
+
+.folder:hover .front {
+    transform: rotateX(-40deg);
+}
+
+.folder .back:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 40px;
+    height: 10px;
+    border-radius: 6px 6px 0 0;
+    background-color: #2f9f57;
+}
+
+.folder .back {
+    background-image: linear-gradient(to top, #5bc477 0%, #35a85d 45%, #218f4d 100%);
+    border-radius: 0 6px 6px 6px;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.folderName {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+}
+
+.add-folder {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    background-color: rgba(24, 132, 71, .16);
+    border-radius: 1px;
+    box-shadow: 0px 8px 24px rgba(25, 25, 26, .06), 0px 4px 16px rgba(25, 25, 26, .04), 0px 0px 4px rgba(25, 25, 26, .04);
+}
+
+.add-folder-9 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    background-color: rgba(24, 132, 71, .16);
+    border-radius: 2px;
+}
+
+.add-folder-1 {
+    width: 97%;
+    background-color: #f5fbf7;
+    border-radius: 1px;
+}
+
+.add-folder-2 {
+    color: #19191a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 28px;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.add-folder-2:hover {
+    background-color: rgba(6, 13, 20, 0.06);
+    border-radius: 4px;
+}
+
+.add-folder-6 {
+    color: #19191a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+    margin-top: 5px;
+}
+
+.add-folder-6:hover {
+    background-color: rgba(6, 13, 20, 0.06);
+    border-radius: 1px;
+}
+.folderTime {
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(37, 48, 43, .36);
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}

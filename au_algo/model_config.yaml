@@ -1,0 +1,10 @@
+models:
+  pyramid_yolov8_rice_disease_best.pt:
+    file: model/pyramid_yolov8_rice_disease_best.pt
+    intro: 水稻病害 Pyramid-YOLOv8 训练权重，来源于 Pyramid-YOLOv8-main/weights/best.pt，用于病害目标检测。
+  ro_yolov8_pki_best.pt:
+    file: model/ro_yolov8_pki_best.pt
+    intro: 水稻病害 Ro-YOLOv8-PKI 训练权重，来源于 Ro-YOLOv8-PKI-main/runs/obb/n/Ro-YOLOv8-PKI/weights/best.pt，用于病害旋转框目标检测。
+  variable_prescription_residual_liquidgate_gcn.pt:
+    file: model/variable_prescription_residual_liquidgate_gcn.pt
+    intro: 变量施药处方图一体化模型，来源于热力图生成＋处方图构建一体化包中的 residual_liquidgate_gcn.pt，用于 8 波段 GeoTIFF 病害热力图推理。

@@ -1,0 +1,47 @@
+# Dependency and generated directories
+node_modules/
+venv/
+.venv/
+.agr_env/
+__pycache__/
+.pytest_cache/
+dist/
+build/
+logs/
+
+# IDE and local runtime files
+.idea/
+.vscode/
+*.log
+au_iot_gateway/.env
+au_iot_gateway/.env.*
+!au_iot_gateway/.env.example
+
+# Large trained model artifacts
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# Vendored/large third-party code snapshots in this workspace
+au_algo/mmcv/
+au_algo/ultralytics/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temporary design extraction output
+design_extract/
+
+# Local credentials and runtime data
+au/backend/.env.*
+!au/backend/.env.*.example
+au/backend/upload_file/
+RiceLeafBlastDataset-main/
+*.zip
+*.pptx
+*.docx
+*.mp4
+*.tif
+*.tiff

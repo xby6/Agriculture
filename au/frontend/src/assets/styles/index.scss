@@ -1,0 +1,742 @@
+@import './variables.module.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './btn.scss';
+@import './ruoyi.scss';
+
+// body {
+//   height: 100%;
+//   background: #061323;
+//   margin: 0;
+//   -moz-osx-font-smoothing: grayscale;
+//   -webkit-font-smoothing: antialiased;
+//   text-rendering: optimizeLegibility;
+//   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+// }
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+aside {
+  background: rgba(6, 29, 47, 0.92);
+  padding: 8px 24px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  display: block;
+  line-height: 32px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  a {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+}
+
+//main-container全局样式
+.app-container {
+  padding: 20px;
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.text-center {
+  text-align: center
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: rgba(6, 29, 47, 0.92);
+  }
+
+  &.deleted {
+    background: rgba(6, 29, 47, 0.92);
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+
+/* 智慧农业平台统一界面风格 */
+:root {
+  --agri-screen-bg: #061323;
+  --agri-screen-bg-2: #04141f;
+  --agri-panel-bg: rgba(6, 29, 47, 0.92);
+  --agri-panel-soft: rgba(5, 24, 40, 0.86);
+  --agri-panel-muted: rgba(4, 24, 39, 0.68);
+  --agri-border: rgba(55, 174, 226, 0.26);
+  --agri-border-soft: rgba(90, 205, 237, 0.14);
+  --agri-text: #eefaff;
+  --agri-text-strong: #f4fbff;
+  --agri-text-regular: #c8e3ee;
+  --agri-muted: #8fb3c7;
+  --agri-muted-readable: #a9c9d8;
+  --agri-accent: #68dfff;
+  --agri-success-readable: #73f2b0;
+  --agri-warning-readable: #ffca6a;
+  --el-color-primary: #0d8fd7;
+  --el-color-primary-light-3: #40b6f0;
+  --el-color-primary-light-5: #72cdf5;
+  --el-color-primary-light-7: #a5e1fa;
+  --el-color-primary-light-8: #c0ebfc;
+  --el-color-primary-light-9: #e6f7ff;
+  --el-color-primary-dark-2: #08689f;
+  --el-bg-color: var(--agri-panel-bg);
+  --el-bg-color-page: var(--agri-screen-bg);
+  --el-bg-color-overlay: rgba(6, 29, 47, 0.98);
+  --el-border-color: var(--agri-border);
+  --el-border-color-light: var(--agri-border-soft);
+  --el-border-color-lighter: rgba(90, 205, 237, 0.1);
+  --el-text-color-primary: var(--agri-text);
+  --el-text-color-regular: #c8e3ee;
+  --el-text-color-secondary: var(--agri-muted);
+  --el-fill-color: rgba(5, 24, 40, 0.86);
+  --el-fill-color-light: rgba(7, 34, 52, 0.76);
+  --el-fill-color-lighter: rgba(7, 34, 52, 0.52);
+  --el-mask-color: rgba(4, 18, 29, 0.86);
+}
+
+.el-card {
+  --el-card-border-color: rgba(68, 201, 255, 0.22);
+  --el-card-bg-color: rgba(6, 30, 64, 0.92);
+}
+
+.el-table th.el-table__cell {
+  background: #08294f !important;
+  color: #d9f4ff;
+}
+
+.el-button--primary {
+  --el-button-text-color: #ffffff;
+  --el-button-bg-color: #0d8fd7;
+  --el-button-border-color: #0d8fd7;
+  --el-button-hover-bg-color: #20a9f0;
+  --el-button-hover-border-color: #20a9f0;
+  --el-button-active-bg-color: #0876b8;
+  --el-button-active-border-color: #0876b8;
+  --el-button-disabled-text-color: rgba(238, 250, 255, 0.62);
+  --el-button-disabled-bg-color: rgba(13, 143, 215, 0.32);
+  --el-button-disabled-border-color: rgba(13, 143, 215, 0.36);
+}
+
+.el-button:not(.is-link):not(.el-button--text):not(.is-text) {
+  --el-button-text-color: #eefaff;
+  --el-button-bg-color: linear-gradient(180deg, rgba(12, 81, 124, 0.95), rgba(8, 51, 82, 0.95));
+  --el-button-border-color: rgba(90, 205, 237, 0.52);
+  --el-button-hover-text-color: var(--agri-text-strong);
+  --el-button-hover-bg-color: rgba(8, 73, 112, 0.92);
+  --el-button-hover-border-color: rgba(104, 223, 255, 0.7);
+  --el-button-active-text-color: var(--agri-text-strong);
+  --el-button-active-bg-color: rgba(7, 58, 91, 0.96);
+  --el-button-active-border-color: rgba(104, 223, 255, 0.82);
+  --el-button-disabled-text-color: rgba(169, 201, 216, 0.62);
+  --el-button-disabled-bg-color: rgba(7, 26, 42, 0.68);
+  --el-button-disabled-border-color: rgba(90, 205, 237, 0.2);
+  color: var(--el-button-text-color) !important;
+  border-color: var(--el-button-border-color) !important;
+  background: var(--el-button-bg-color) !important;
+  box-shadow: none;
+  font-weight: 700;
+}
+
+.el-button:not(.is-link):not(.el-button--text):not(.is-text):hover,
+.el-button:not(.is-link):not(.el-button--text):not(.is-text):focus {
+  color: var(--el-button-hover-text-color) !important;
+  border-color: var(--el-button-hover-border-color) !important;
+  background: var(--el-button-hover-bg-color) !important;
+}
+
+.el-button:not(.is-link):not(.el-button--text):not(.is-text):active {
+  color: var(--el-button-active-text-color) !important;
+  border-color: var(--el-button-active-border-color) !important;
+  background: var(--el-button-active-bg-color) !important;
+}
+
+.el-button:not(.is-link):not(.el-button--text):not(.is-text).is-disabled,
+.el-button:not(.is-link):not(.el-button--text):not(.is-text).is-disabled:hover,
+.el-button:not(.is-link):not(.el-button--text):not(.is-text).is-disabled:focus {
+  color: #cde7f4 !important;
+  border-color: var(--el-button-disabled-border-color) !important;
+  background: rgba(7, 26, 42, 0.88) !important;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.el-button.is-plain:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #eefaff !important;
+  border-color: rgba(90, 205, 237, 0.56) !important;
+  background: linear-gradient(180deg, rgba(10, 67, 104, 0.9), rgba(7, 37, 58, 0.92)) !important;
+}
+
+.el-button--primary:not(.is-link):not(.el-button--text):not(.is-text),
+.el-button--primary.is-plain:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #ffffff !important;
+  border-color: rgba(32, 169, 240, 0.78) !important;
+  background: linear-gradient(180deg, rgba(25, 155, 225, 0.98), rgba(11, 116, 181, 0.98)) !important;
+}
+
+.el-button--success.is-plain:not(.is-link):not(.el-button--text):not(.is-text),
+.el-button--success:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #d9ffe8 !important;
+  border-color: rgba(115, 242, 176, 0.5) !important;
+  background: rgba(31, 126, 78, 0.28) !important;
+}
+
+.el-button--danger.is-plain:not(.is-link):not(.el-button--text):not(.is-text),
+.el-button--danger:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #ffe5e8 !important;
+  border-color: rgba(255, 98, 98, 0.52) !important;
+  background: rgba(150, 42, 55, 0.3) !important;
+}
+
+.el-button--warning.is-plain:not(.is-link):not(.el-button--text):not(.is-text),
+.el-button--warning:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #fff0c2 !important;
+  border-color: rgba(255, 202, 106, 0.56) !important;
+  background: rgba(161, 104, 26, 0.3) !important;
+}
+
+.el-button--info.is-plain:not(.is-link):not(.el-button--text):not(.is-text),
+.el-button--info:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #d4e9f4 !important;
+  border-color: rgba(169, 201, 216, 0.44) !important;
+  background: rgba(91, 120, 138, 0.24) !important;
+}
+
+.el-button.is-circle:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #f8fdff !important;
+  border-color: rgba(104, 223, 255, 0.56) !important;
+  background: linear-gradient(145deg, rgba(8, 73, 112, 0.94), rgba(5, 33, 54, 0.96)) !important;
+  box-shadow: inset 0 0 0 1px rgba(238, 250, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.el-dropdown-menu,
+.el-popper.is-light {
+  border-color: rgba(90, 205, 237, 0.34) !important;
+  background: rgba(3, 17, 30, 0.98) !important;
+}
+
+.el-dropdown-menu__item {
+  color: #e6f7ff !important;
+  font-weight: 700;
+}
+
+.el-dropdown-menu__item:not(.is-disabled):hover,
+.el-dropdown-menu__item:not(.is-disabled):focus {
+  color: #ffffff !important;
+  background: rgba(17, 105, 154, 0.72) !important;
+}
+
+.el-dropdown-menu__item.is-disabled {
+  color: #9ebfd0 !important;
+  background: rgba(7, 26, 42, 0.9) !important;
+}
+
+.el-button.is-link,
+.el-button--text,
+.el-button.is-text {
+  color: var(--agri-accent) !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+.el-button.is-link.is-disabled,
+.el-button--text.is-disabled,
+.el-button.is-text.is-disabled {
+  color: rgba(169, 201, 216, 0.48) !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+.app-main {
+  background: #061323;
+}
+
+html,
+body,
+#app,
+.app-wrapper,
+.main-container,
+.app-main,
+.layout-container {
+  background: var(--agri-screen-bg) !important;
+  color: var(--agri-text);
+}
+
+.app-container,
+.components-container,
+.agri-page,
+.agri-business-page {
+  min-height: calc(100vh - 84px);
+  background: var(--agri-screen-bg) !important;
+  color: var(--agri-text);
+}
+
+.app-main aside {
+  color: var(--agri-text);
+  border: 1px solid var(--agri-border);
+  background: var(--agri-panel-bg) !important;
+}
+
+.el-card,
+.table-card,
+.flight-card,
+.summary-card,
+.metric-card,
+.metric-item,
+.report-type-card,
+.data-asset-card,
+.collection-card,
+.stage-item,
+.section,
+.folder-tree-panel,
+.file-list-panel,
+.file-selection-container,
+.selected-file-item,
+.algorithm-params-info,
+.param-item,
+.breadcrumb,
+.tree-border {
+  color: var(--agri-text) !important;
+  border-color: var(--agri-border) !important;
+  background: var(--agri-panel-bg) !important;
+  box-shadow: none !important;
+}
+
+.panel-header,
+.stage-item.active,
+.folderWrapper:hover,
+.folderWrapper.selected,
+.selected-count,
+.rank,
+.report-icon,
+.icon-wrap,
+.score-ring,
+.map-legend {
+  color: var(--agri-text) !important;
+  border-color: var(--agri-border-soft) !important;
+  background: var(--agri-panel-soft) !important;
+}
+
+.el-card__header,
+.el-card__body,
+.el-tabs__header,
+.el-tabs__content,
+.el-descriptions__body,
+.el-collapse,
+.el-collapse-item__header,
+.el-collapse-item__wrap,
+.el-empty,
+.el-drawer,
+.el-dialog,
+.el-message-box,
+.el-popover.el-popper,
+.el-dropdown__popper.el-popper,
+.el-select__popper.el-popper,
+.el-picker__popper.el-popper,
+.el-tooltip__popper,
+.el-notification,
+.el-loading-mask {
+  color: var(--agri-text) !important;
+  border-color: var(--agri-border) !important;
+  background: var(--agri-panel-bg) !important;
+}
+
+.el-table,
+.el-table__inner-wrapper,
+.el-table__body-wrapper,
+.el-table__header-wrapper,
+.el-table__footer-wrapper,
+.el-table__expanded-cell,
+.el-table tr,
+.el-table td.el-table__cell,
+.el-table th.el-table__cell {
+  color: var(--agri-text) !important;
+  border-color: var(--agri-border-soft) !important;
+  background: var(--agri-panel-bg) !important;
+}
+
+.el-table th.el-table__cell,
+.el-table__fixed-header-wrapper th.el-table__cell {
+  color: #d9f4ff !important;
+  background: rgba(5, 32, 52, 0.96) !important;
+}
+
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell,
+.el-table__body tr.hover-row > td.el-table__cell,
+.el-table__body tr:hover > td.el-table__cell {
+  background: rgba(7, 40, 58, 0.92) !important;
+}
+
+.el-table::before,
+.el-table__inner-wrapper::before,
+.el-table__border-left-patch {
+  background-color: var(--agri-border-soft) !important;
+}
+
+.el-pagination,
+.pagination-container,
+.pagination {
+  color: var(--agri-text) !important;
+  background: transparent !important;
+}
+
+.el-pagination button,
+.el-pagination .el-pager li,
+.el-pagination .btn-prev,
+.el-pagination .btn-next {
+  color: var(--agri-text) !important;
+  border-color: var(--agri-border-soft) !important;
+  background: var(--agri-panel-soft) !important;
+}
+
+.el-input__wrapper,
+.el-select__wrapper,
+.el-textarea__inner,
+.el-input-number,
+.el-date-editor.el-input__wrapper,
+.el-range-editor.el-input__wrapper,
+.el-transfer-panel,
+.el-upload-dragger,
+.el-tree,
+.el-menu,
+.el-sub-menu,
+.el-menu-item,
+.el-dropdown-menu {
+  color: var(--agri-text) !important;
+  border-color: var(--agri-border) !important;
+  background: rgba(3, 20, 34, 0.9) !important;
+}
+
+.el-input__inner,
+.el-textarea__inner,
+.el-select__placeholder,
+.el-select__selected-item,
+.el-form-item__label,
+.el-checkbox__label,
+.el-radio__label,
+.el-tree-node__label,
+.el-descriptions__label,
+.el-descriptions__content,
+.el-empty__description,
+.card-title,
+.section-title,
+.file-selection-title,
+.param-title,
+.summary-card strong,
+.metric-card strong,
+.report-info strong,
+.collection-card strong,
+.data-asset-card strong,
+.ranking-info strong,
+.factor-row strong,
+.schedule-content strong,
+.date-box strong {
+  color: var(--agri-text) !important;
+}
+
+.summary-card span,
+.metric-card span,
+.summary-card p,
+.metric-card p,
+.report-info p,
+.report-info span,
+.collection-card p,
+.data-asset-card span,
+.data-asset-card small,
+.ranking-info p,
+.factor-row span,
+.schedule-content p,
+.schedule-content > span,
+.date-box span,
+.subtle,
+.current-folder,
+.file-size,
+.more-files,
+.no-files-tip,
+.param-intro,
+.text-muted {
+  color: var(--agri-muted) !important;
+}
+
+.field-map {
+  border: 1px solid var(--agri-border) !important;
+  background:
+    linear-gradient(145deg, rgba(7, 44, 58, 0.84), rgba(4, 24, 32, 0.98)),
+    var(--agri-screen-bg) !important;
+}
+
+.field-map::before {
+  background-image: none !important;
+}
+
+.register {
+  background:
+    linear-gradient(180deg, rgba(6, 19, 35, 0.96), rgba(5, 23, 29, 0.98)),
+    var(--agri-screen-bg) !important;
+}
+
+.register-form {
+  color: var(--agri-text) !important;
+  border: 1px solid var(--agri-border) !important;
+  background: var(--agri-panel-bg) !important;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.32) !important;
+}
+
+/* 深色大屏/业务页统一可读文字规范 */
+.app-main .app-container,
+.app-main .components-container,
+.agri-page,
+.agri-business-page,
+.section {
+  color: var(--agri-text-regular) !important;
+  font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+
+.app-main .app-container :is(h1, h2, h3, h4, h5, h6, .card-title, .section-title, .panel-title, .table-title, .file-selection-title, .param-title, .folderName, .task-name, .report-info strong, .summary-card strong, .metric-card strong, .metric-item strong, .data-asset-card strong, .collection-card strong, .ranking-info strong, .schedule-content strong, .date-box strong, .stats strong, .result-head strong, .detection-result dd, .advice-list b, .conclusion-list b, .workload-row strong, .factor-row strong, .el-dialog__title, .el-message-box__title, .el-drawer__title, .el-descriptions__title),
+.section :is(h1, h2, h3, h4, h5, h6, .section-title, .task-name) {
+  color: var(--agri-text-strong) !important;
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(94, 223, 255, 0.16);
+}
+
+.app-main .app-container :is(p, dt, dd, li, small, .subtle, .update-time, .form-tip, .file-size, .more-files, .no-files-tip, .no-data, .loading, .task-id, .el-upload__tip, .param-intro, .current-folder, .report-info p, .report-info span, .summary-card span, .summary-card p, .metric-card span, .metric-card p, .metric-item span, .metric-item p, .collection-card span, .collection-card p, .data-asset-card span, .data-asset-card small, .ranking-info p, .risk-copy p, .factor-row, .factor-row span, .advice-list span, .conclusion-list, .schedule-content p, .schedule-content > span, .date-box span, .stage-item p, .stage-item small, .workload-row > div, .el-empty__description, .el-form-item__label, .el-checkbox__label, .el-radio__label, .el-breadcrumb__inner, .el-table .cell),
+.section :is(p, span, small, .no-data, .loading, .task-id, .el-upload__tip, .el-empty__description, .el-table .cell) {
+  color: var(--agri-text-regular) !important;
+}
+
+.app-main .app-container :is(.subtle, .update-time, .form-tip, .file-size, .more-files, .no-files-tip, .task-id, .el-upload__tip, .param-intro, .current-folder, .report-info span, .summary-card span, .summary-card p, .metric-card span, .metric-card p, .collection-card span, .data-asset-card span, .data-asset-card small, .ranking-info p, .factor-row span, .advice-list span, .schedule-content p, .schedule-content > span, .date-box span, .stage-item small, .el-empty__description),
+.section :is(.task-id, .no-data, .loading, .el-upload__tip, .el-empty__description) {
+  color: var(--agri-muted-readable) !important;
+}
+
+.app-main .app-container :is(.rank, .icon-wrap, .report-icon, .metric-icon, .panel-header h4, .algorithm-params-info h4, .param-name, .stage-item.active p, .advice-list b, .report-type-card > .el-button, .card-title .el-button, .el-button.is-link) {
+  color: var(--agri-accent) !important;
+}
+
+.app-main .app-container :is(.score-ring strong, .param-default) {
+  color: var(--agri-warning-readable) !important;
+}
+
+.app-main .app-container :is(.score-ring span, .risk-copy p, .factor-row, .workload-row > div) {
+  color: var(--agri-text-regular) !important;
+}
+
+.app-main .app-container :is(.metric-item p.normal, .metric-card p.normal, .summary-card p.normal) {
+  color: var(--agri-success-readable) !important;
+}
+
+.app-main .app-container :is(.metric-item p.warning, .metric-card p.warning, .summary-card p.warning) {
+  color: var(--agri-warning-readable) !important;
+}
+
+.app-main .app-container :is(.el-input__inner, .el-textarea__inner, .el-select__placeholder, .el-select__selected-item, .el-range-input, .el-range-separator, .el-date-editor .el-range-input, .el-pagination__total, .el-pagination__jump, .el-pagination .el-select .el-input .el-input__inner) {
+  color: var(--agri-text-regular) !important;
+}
+
+.app-main .app-container :is(.el-input__inner, .el-textarea__inner, .el-range-input)::placeholder {
+  color: rgba(169, 201, 216, 0.72) !important;
+}
+
+.app-main .app-container :is(.el-table th.el-table__cell, .el-table th.el-table__cell .cell, .el-table__header-wrapper .cell) {
+  color: var(--agri-text-strong) !important;
+  font-weight: 800;
+}
+
+.app-main .app-container :is(.el-table td.el-table__cell, .el-table td.el-table__cell .cell) {
+  color: var(--agri-text-regular) !important;
+}
+
+.app-main .app-container :is(.el-card, .table-card, .flight-card, .summary-card, .metric-card, .metric-item, .report-type-card, .data-asset-card, .collection-card, .stage-item, .section, .filter-card, .chart-panel, .alert-panel, .table-panel, .upload-panel, .risk-panel, .trend-panel, .advice-panel, .records-panel, .ranking-card, .trend-card, .feature-card, .calendar-card, .progress-card) {
+  border-color: rgba(55, 174, 226, 0.34) !important;
+  background: linear-gradient(145deg, rgba(6, 29, 47, 0.96), rgba(5, 24, 40, 0.98)) !important;
+}
+
+body :is([style*="color: #666"], [style*="color:#666"], [style*="color: #909399"], [style*="color:#909399"], [style*="color: #999"], [style*="color:#999"], [style*="color: #606266"], [style*="color:#606266"], [style*="color: #303133"], [style*="color:#303133"]) {
+  color: var(--agri-text-regular) !important;
+}
+
+.el-dropdown-menu__item,
+.el-menu--popup .el-menu-item,
+.el-select-dropdown__item,
+.el-picker-panel,
+.el-picker-panel__body,
+.el-date-table td,
+.el-month-table td,
+.el-year-table td {
+  color: var(--agri-text-regular) !important;
+  background: transparent !important;
+}
+
+.el-dropdown-menu__item:not(.is-disabled):hover,
+.el-dropdown-menu__item:not(.is-disabled):focus,
+.el-menu--popup .el-menu-item:not(.is-disabled):hover,
+.el-menu--popup .el-menu-item:not(.is-disabled):focus,
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+  color: var(--agri-text-strong) !important;
+  background: rgba(8, 73, 112, 0.72) !important;
+}
+
+.el-dropdown-menu__item.is-disabled,
+.el-menu-item.is-disabled,
+.el-select-dropdown__item.is-disabled {
+  color: rgba(169, 201, 216, 0.5) !important;
+  background: rgba(238, 250, 255, 0.05) !important;
+}
+
+.el-popper.is-light {
+  color: var(--agri-text-regular) !important;
+  border-color: rgba(55, 174, 226, 0.34) !important;
+  background: rgba(3, 20, 34, 0.98) !important;
+}
+
+.el-popper.is-light .el-popper__arrow::before {
+  border-color: rgba(55, 174, 226, 0.34) !important;
+  background: rgba(3, 20, 34, 0.98) !important;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(3, 20, 34, 0.88);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: rgba(90, 205, 237, 0.42);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(104, 223, 255, 0.62);
+}
+
+@import './light-agriculture.scss';
+@import './bigscreen-dashboard.scss';

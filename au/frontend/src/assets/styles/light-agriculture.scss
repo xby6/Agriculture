@@ -1,0 +1,931 @@
+/* 清新农业绿固定浅色主题：仅统一颜色，不改变任何布局与业务行为。 */
+:root,
+html.dark {
+  color-scheme: light;
+  --agri-screen-bg: #edf7ef;
+  --agri-screen-bg-2: #e4f2e7;
+  --agri-panel-bg: #ffffff;
+  --agri-panel-soft: #edf7ef;
+  --agri-panel-muted: #e4f2e7;
+  --agri-border: rgba(35, 139, 75, 0.24);
+  --agri-border-soft: rgba(35, 139, 75, 0.14);
+  --agri-text: #183322;
+  --agri-text-strong: #142d1d;
+  --agri-text-regular: #3f5948;
+  --agri-muted: #718177;
+  --agri-muted-readable: #718177;
+  --agri-accent: #198f4b;
+  --agri-success-readable: #238b4b;
+  --agri-warning-readable: #aa791a;
+
+  --el-color-primary: #198f4b;
+  --el-color-primary-light-3: #5caf78;
+  --el-color-primary-light-5: #8bc69d;
+  --el-color-primary-light-7: #b9ddc3;
+  --el-color-primary-light-8: #d2e9d8;
+  --el-color-primary-light-9: #e9f5ec;
+  --el-color-primary-dark-2: #116f39;
+  --el-color-success: #4f9a5a;
+  --el-color-warning: #d7a12e;
+  --el-color-danger: #d95d56;
+  --el-color-info: #718177;
+  --el-bg-color: #ffffff;
+  --el-bg-color-page: #edf7ef;
+  --el-bg-color-overlay: #ffffff;
+  --el-text-color-primary: #183322;
+  --el-text-color-regular: #3f5948;
+  --el-text-color-secondary: #718177;
+  --el-text-color-placeholder: #9aa79e;
+  --el-border-color: #d7e4d8;
+  --el-border-color-light: #e4ece4;
+  --el-border-color-lighter: #edf2ed;
+  --el-fill-color: #edf7ef;
+  --el-fill-color-light: #f3f9f4;
+  --el-fill-color-lighter: #fafcf9;
+  --el-fill-color-blank: #ffffff;
+  --el-mask-color: rgba(27, 52, 35, 0.32);
+  --splitpanes-default-bg: #edf7ef;
+}
+
+html,
+body,
+#app,
+#app .app-wrapper,
+#app .main-container,
+#app .app-main,
+#app .layout-container,
+#app .app-container,
+#app .components-container,
+#app .agri-page,
+#app .agri-business-page {
+  color: #3f5948 !important;
+  background: #edf7ef !important;
+  background-color: #edf7ef !important;
+}
+
+/* 顶部导航 */
+#app .navbar {
+  color: #294633 !important;
+  border-bottom-color: rgba(74, 128, 82, 0.18) !important;
+  background: rgba(255, 255, 255, 0.97) !important;
+  box-shadow: 0 6px 22px rgba(43, 87, 55, 0.09) !important;
+}
+
+#app .navbar .brand-title,
+#app .navbar .clock,
+#app .navbar .avatar-wrapper,
+#app .navbar .user-name {
+  color: #183322 !important;
+  text-shadow: none !important;
+}
+
+#app .navbar .clock span {
+  color: #718177 !important;
+}
+
+#app .navbar .brand-logo {
+  filter: drop-shadow(0 4px 8px rgba(47, 125, 74, 0.18)) !important;
+}
+
+#app .navbar .avatar-wrapper {
+  border-color: rgba(74, 128, 82, 0.18) !important;
+  background: #f3f8f2 !important;
+}
+
+#app .top-nav-menu,
+#app .top-nav-menu.el-menu,
+#app .agri-top-menu,
+#app .agri-top-menu.el-menu,
+#app .top-nav-menu .el-menu-item,
+#app .top-nav-menu .el-sub-menu__title,
+#app .agri-top-menu .el-menu-item,
+#app .agri-top-menu .el-sub-menu__title {
+  color: #3f5948 !important;
+  background: #ffffff !important;
+}
+
+#app .agri-top-menu.el-menu--horizontal {
+  --el-menu-bg-color: #ffffff !important;
+  --el-menu-text-color: #3f5948 !important;
+  --el-menu-hover-bg-color: #edf5ee !important;
+  --el-menu-hover-text-color: #24653b !important;
+  --el-menu-active-color: #24653b !important;
+  --el-menu-border-color: transparent !important;
+  border: 0 !important;
+  border-bottom: 0 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+#app .agri-top-menu.el-menu--horizontal > .el-sub-menu,
+#app .agri-top-menu.el-menu--horizontal > .el-sub-menu:hover,
+#app .agri-top-menu.el-menu--horizontal > .el-sub-menu:focus,
+#app .agri-top-menu.el-menu--horizontal > .el-sub-menu.is-opened,
+#app .agri-top-menu.el-menu--horizontal > .el-sub-menu.is-active {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#app .agri-top-menu.el-menu--horizontal > .el-menu-item,
+#app .agri-top-menu.el-menu--horizontal > .el-sub-menu > .el-sub-menu__title {
+  border: 1px solid transparent !important;
+  border-bottom: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+#app .top-nav-menu .el-menu-item:hover,
+#app .top-nav-menu .el-menu-item.is-active,
+#app .top-nav-menu .el-sub-menu__title:hover,
+#app .agri-top-menu .el-menu-item:hover,
+#app .agri-top-menu .el-menu-item.is-active,
+#app .agri-top-menu .el-sub-menu__title:hover,
+#app .agri-top-menu .el-sub-menu.is-active .el-sub-menu__title,
+#app .agri-top-menu .el-sub-menu.is-opened .el-sub-menu__title {
+  color: #24653b !important;
+  border-color: rgba(47, 125, 74, 0.28) !important;
+  background: rgba(47, 125, 74, 0.09) !important;
+  box-shadow: none !important;
+}
+
+#app .agri-top-menu.el-menu--horizontal > .el-menu-item::before,
+#app .agri-top-menu.el-menu--horizontal > .el-menu-item::after,
+#app .agri-top-menu.el-menu--horizontal > .el-sub-menu::before,
+#app .agri-top-menu.el-menu--horizontal > .el-sub-menu::after,
+#app .agri-top-menu.el-menu--horizontal > .el-sub-menu > .el-sub-menu__title::before,
+#app .agri-top-menu.el-menu--horizontal > .el-sub-menu > .el-sub-menu__title::after {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  content: none !important;
+}
+
+body .agri-top-menu-popper {
+  color: #3f5948 !important;
+  border-color: #dce8dc !important;
+  background: #ffffff !important;
+  box-shadow: 0 12px 28px rgba(43, 87, 55, 0.12) !important;
+}
+
+body .agri-top-menu-popper :is(.el-menu-item, .el-sub-menu__title) {
+  color: #3f5948 !important;
+  background: transparent !important;
+}
+
+body .agri-top-menu-popper :is(.el-menu-item, .el-sub-menu__title):hover,
+body .agri-top-menu-popper .el-menu-item.is-active {
+  color: #24653b !important;
+  background: #edf5ee !important;
+}
+
+#app .agri-platform-ribbon {
+  color: #294633 !important;
+  border-color: rgba(74, 128, 82, 0.18) !important;
+  background: linear-gradient(100deg, #ffffff, #e6f5e9) !important;
+  box-shadow: 0 8px 22px rgba(43, 87, 55, 0.07) !important;
+}
+
+#app .agri-platform-ribbon .ribbon-mark {
+  color: #ffffff !important;
+  border-color: #2f7d4a !important;
+  background: linear-gradient(145deg, #4f9a5a, #2f7d4a) !important;
+}
+
+#app .agri-platform-ribbon .ribbon-copy strong,
+#app .agri-platform-ribbon .ribbon-status {
+  color: #244f31 !important;
+}
+
+#app .agri-platform-ribbon .ribbon-copy span {
+  color: #718177 !important;
+}
+
+#app .agri-platform-ribbon .ribbon-status i {
+  background: #4f9a5a !important;
+  box-shadow: 0 0 0 4px rgba(79, 154, 90, 0.12) !important;
+}
+
+#app .agri-page-header {
+  color: #3f5948 !important;
+  border-color: rgba(74, 128, 82, 0.18) !important;
+  background: linear-gradient(100deg, #ffffff, #e6f5e9) !important;
+  box-shadow: 0 8px 24px rgba(43, 87, 55, 0.07) !important;
+}
+
+#app .agri-page-header__icon {
+  color: #ffffff !important;
+  border-color: #2f7d4a !important;
+  background: linear-gradient(145deg, #4f9a5a, #2f7d4a) !important;
+  box-shadow: 0 8px 18px rgba(47, 125, 74, 0.16) !important;
+}
+
+#app .agri-page-header__eyebrow {
+  color: #2f7d4a !important;
+}
+
+#app .agri-page-header h1 {
+  color: #183322 !important;
+  text-shadow: none !important;
+}
+
+#app .agri-page-header p {
+  color: #718177 !important;
+}
+
+/* Element Plus 基础组件 */
+body .el-card,
+body .el-dialog,
+body .el-drawer,
+body .el-message-box,
+body .el-popover.el-popper,
+body .el-dropdown__popper.el-popper,
+body .el-select__popper.el-popper,
+body .el-picker__popper.el-popper,
+body .el-notification,
+body .el-collapse,
+body .el-collapse-item__header,
+body .el-collapse-item__wrap,
+body .el-descriptions__body,
+body .el-transfer-panel,
+body .el-tree,
+body .el-upload-dragger {
+  color: #3f5948 !important;
+  border-color: #dce8dc !important;
+  background: #ffffff !important;
+  box-shadow: 0 10px 28px rgba(43, 87, 55, 0.07) !important;
+}
+
+body .el-card__header,
+body .el-card__body,
+body .el-tabs__header,
+body .el-tabs__content,
+body .el-dialog__header,
+body .el-dialog__body,
+body .el-dialog__footer,
+body .el-drawer__header,
+body .el-drawer__body {
+  color: #3f5948 !important;
+  border-color: #e4ece4 !important;
+  background: transparent !important;
+}
+
+body .el-input__wrapper,
+body .el-select__wrapper,
+body .el-textarea__inner,
+body .el-date-editor.el-input__wrapper,
+body .el-range-editor.el-input__wrapper,
+body .el-input-number,
+body .el-cascader .el-input__wrapper {
+  color: #3f5948 !important;
+  border-color: #d7e4d8 !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 1px #d7e4d8 inset !important;
+}
+
+body .el-input__wrapper:hover,
+body .el-select__wrapper:hover,
+body .el-textarea__inner:hover,
+body .el-input__wrapper.is-focus,
+body .el-select__wrapper.is-focused {
+  box-shadow: 0 0 0 1px #6fae7c inset !important;
+}
+
+body .el-input__inner,
+body .el-textarea__inner,
+body .el-select__selected-item,
+body .el-select__placeholder,
+body .el-range-input,
+body .el-range-separator,
+body .el-form-item__label,
+body .el-checkbox__label,
+body .el-radio__label,
+body .el-tree-node__label,
+body .el-descriptions__label,
+body .el-descriptions__content,
+body .el-empty__description,
+body .el-dialog__title,
+body .el-drawer__title,
+body .el-message-box__title {
+  color: #3f5948 !important;
+}
+
+body .el-input__inner::placeholder,
+body .el-textarea__inner::placeholder,
+body .el-range-input::placeholder {
+  color: #9aa79e !important;
+}
+
+body .el-table,
+body .el-table__inner-wrapper,
+body .el-table__body-wrapper,
+body .el-table__header-wrapper,
+body .el-table__footer-wrapper,
+body .el-table__expanded-cell,
+body .el-table tr,
+body .el-table td.el-table__cell {
+  color: #3f5948 !important;
+  border-color: #e4ece4 !important;
+  background: #ffffff !important;
+}
+
+body .el-table th.el-table__cell,
+body .el-table__fixed-header-wrapper th.el-table__cell {
+  color: #244f31 !important;
+  border-color: #dce8dc !important;
+  background: #edf5ee !important;
+}
+
+body .el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+  background: #f8fbf7 !important;
+}
+
+body .el-table__body tr.hover-row > td.el-table__cell,
+body .el-table__body tr:hover > td.el-table__cell {
+  background: #eef6ee !important;
+}
+
+body .el-dropdown-menu,
+body .el-popper.is-light,
+body .el-menu--popup,
+body .el-select-dropdown,
+body .el-picker-panel {
+  color: #3f5948 !important;
+  border-color: #dce8dc !important;
+  background: #ffffff !important;
+  box-shadow: 0 12px 28px rgba(43, 87, 55, 0.12) !important;
+}
+
+body .el-dropdown-menu__item,
+body .el-menu--popup .el-menu-item,
+body .el-select-dropdown__item,
+body .el-picker-panel,
+body .el-date-table td,
+body .el-month-table td,
+body .el-year-table td {
+  color: #3f5948 !important;
+  background: transparent !important;
+}
+
+body .el-dropdown-menu__item:not(.is-disabled):hover,
+body .el-menu--popup .el-menu-item:not(.is-disabled):hover,
+body .el-select-dropdown__item.hover,
+body .el-select-dropdown__item:hover {
+  color: #24653b !important;
+  background: #edf5ee !important;
+}
+
+body .el-popper.is-light .el-popper__arrow::before {
+  border-color: #dce8dc !important;
+  background: #ffffff !important;
+}
+
+body .el-pagination,
+body .pagination-container,
+body .pagination {
+  color: #3f5948 !important;
+  background: transparent !important;
+}
+
+body .el-pagination button,
+body .el-pagination .el-pager li,
+body .el-pagination .btn-prev,
+body .el-pagination .btn-next {
+  color: #3f5948 !important;
+  border-color: #dce8dc !important;
+  background: #ffffff !important;
+}
+
+body .el-pagination .el-pager li.is-active {
+  color: #ffffff !important;
+  background: #2f7d4a !important;
+}
+
+body .el-button:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #31513a !important;
+  border-color: #cbdccb !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body .el-button:not(.is-link):not(.el-button--text):not(.is-text):hover,
+body .el-button:not(.is-link):not(.el-button--text):not(.is-text):focus {
+  color: #24653b !important;
+  border-color: #6fae7c !important;
+  background: #edf5ee !important;
+}
+
+body .el-button--primary:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #ffffff !important;
+  border-color: #2f7d4a !important;
+  background: linear-gradient(145deg, #4f9a5a, #2f7d4a) !important;
+}
+
+body .el-button--success:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #ffffff !important;
+  border-color: #4f9a5a !important;
+  background: #4f9a5a !important;
+}
+
+body .el-button--warning:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #ffffff !important;
+  border-color: #d7a12e !important;
+  background: #d7a12e !important;
+}
+
+body .el-button--danger:not(.is-link):not(.el-button--text):not(.is-text) {
+  color: #ffffff !important;
+  border-color: #d95d56 !important;
+  background: #d95d56 !important;
+}
+
+body .el-button.is-link,
+body .el-button--text,
+body .el-button.is-text {
+  color: #2f7d4a !important;
+  background: transparent !important;
+}
+
+/* 通用业务卡片与标题 */
+#app :is(.table-card, .flight-card, .summary-card, .metric-card, .metric-item, .report-type-card,
+  .data-asset-card, .collection-card, .stage-item, .section, .filter-card, .surface-card,
+  .chart-panel, .alert-panel, .table-panel, .upload-panel, .risk-panel, .trend-panel,
+  .advice-panel, .records-panel, .ranking-card, .trend-card, .feature-card, .calendar-card,
+  .progress-card, .folder-tree-panel, .file-list-panel, .file-selection-container,
+  .selected-file-item, .algorithm-params-info, .param-item, .tree-border) {
+  color: #3f5948 !important;
+  border-color: rgba(74, 128, 82, 0.18) !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(43, 87, 55, 0.07) !important;
+}
+
+#app :is(.panel-header, .folderWrapper:hover, .folderWrapper.selected, .selected-count,
+  .rank, .report-icon, .icon-wrap, .score-ring, .map-legend) {
+  color: #2f7d4a !important;
+  border-color: rgba(74, 128, 82, 0.16) !important;
+  background: #edf5ee !important;
+}
+
+#app :is(h1, h2, h3, h4, h5, h6, .card-title, .section-title, .panel-title,
+  .table-title, .file-selection-title, .param-title, .folderName, .task-name) {
+  color: #183322 !important;
+  text-shadow: none !important;
+}
+
+#app :is(.subtle, .update-time, .form-tip, .file-size, .more-files, .no-files-tip,
+  .task-id, .param-intro, .current-folder, .data-note) {
+  color: #718177 !important;
+}
+
+/* 大屏：保持原布局，转为白底农业绿信息看板。 */
+#app .rice-screen,
+#app .rice-bigscreen {
+  --panel: #ffffff !important;
+  --panel-soft: #f3f8f2 !important;
+  --line: rgba(74, 128, 82, 0.20) !important;
+  --line-soft: rgba(74, 128, 82, 0.11) !important;
+  --text: #183322 !important;
+  --muted: #718177 !important;
+  --green: #4f9a5a !important;
+  --cyan: #5ea98a !important;
+  --yellow: #d7a12e !important;
+  --orange: #d28736 !important;
+  --red: #d95d56 !important;
+  color: #3f5948 !important;
+  background: #f4f8f3 !important;
+  background-color: #f4f8f3 !important;
+}
+
+#app .rice-bigscreen :is(.bigscreen-shell, .screen-body) {
+  background: #f4f8f3 !important;
+}
+
+#app .rice-bigscreen .screen-header,
+#app .rice-bigscreen .screen-side,
+#app .rice-bigscreen .panel,
+#app .rice-bigscreen .kpi-card,
+#app .rice-bigscreen .chart-card,
+#app .rice-bigscreen .environment-record-card {
+  color: #3f5948 !important;
+  border-color: rgba(74, 128, 82, 0.18) !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 22px rgba(43, 87, 55, 0.07) !important;
+}
+
+#app .rice-bigscreen .screen-title {
+  border-color: rgba(47, 125, 74, 0.26) !important;
+  background: linear-gradient(180deg, #f8fcf7, #edf6ed) !important;
+  box-shadow: none !important;
+}
+
+#app .rice-bigscreen .screen-title h1,
+#app .rice-bigscreen .panel-title-main strong,
+#app .rice-bigscreen .kpi-card small,
+#app .rice-bigscreen .environment-record-row strong {
+  color: #183322 !important;
+  text-shadow: none !important;
+}
+
+#app .rice-bigscreen .kpi-card span,
+#app .rice-bigscreen .environment-record-head,
+#app .rice-bigscreen .environment-record-row time,
+#app .rice-bigscreen .environment-record-row span small {
+  color: #718177 !important;
+}
+
+#app .rice-bigscreen .kpi-card strong,
+#app .rice-bigscreen .environment-record-row span {
+  color: #2f7d4a !important;
+}
+
+#app .rice-bigscreen .panel-title,
+#app .rice-bigscreen .env-grid article,
+#app .rice-bigscreen .task-list article {
+  background: #f3f8f2 !important;
+}
+
+#app .rice-bigscreen .field-map {
+  border-color: rgba(74, 128, 82, 0.22) !important;
+  background: linear-gradient(145deg, #eef6ed, #e3eee2) !important;
+}
+
+#app .rice-bigscreen .field-map::before {
+  border-color: rgba(74, 128, 82, 0.15) !important;
+  background: linear-gradient(130deg, rgba(79, 154, 90, 0.10), transparent 40%) !important;
+}
+
+#app .rice-bigscreen .plot-hotspot {
+  color: #ffffff !important;
+  border-color: #2f7d4a !important;
+  background: #4f9a5a !important;
+}
+
+#app .rice-bigscreen .plot-hotspot:hover,
+#app .rice-bigscreen .plot-hotspot.active {
+  background: #2f7d4a !important;
+  box-shadow: 0 0 0 4px rgba(47, 125, 74, 0.14) !important;
+}
+
+#app .rice-bigscreen .map-detail {
+  color: #3f5948 !important;
+  border-color: #d7e4d8 !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+}
+
+#app .rice-bigscreen .environment-record-viewport::before {
+  background: linear-gradient(180deg, #ffffff, transparent) !important;
+}
+
+#app .rice-bigscreen .environment-record-viewport::after {
+  background: linear-gradient(0deg, #ffffff, transparent) !important;
+}
+
+#app .rice-bigscreen .environment-record-row:hover {
+  background: #edf5ee !important;
+}
+
+#app .rice-bigscreen .el-loading-mask {
+  background: rgba(244, 248, 243, 0.88) !important;
+}
+
+/* 环境监测页 */
+#app .agri-page {
+  --page-bg: #f4f8f3 !important;
+  --surface: #ffffff !important;
+  --surface-strong: #ffffff !important;
+  --surface-soft: #f3f8f2 !important;
+  --border: rgba(74, 128, 82, 0.18) !important;
+  --border-strong: rgba(47, 125, 74, 0.30) !important;
+  --text-main: #183322 !important;
+  --text-secondary: #3f5948 !important;
+  --text-muted: #718177 !important;
+  --green: #4f9a5a !important;
+  --cyan: #5ea98a !important;
+  --yellow: #d7a12e !important;
+  --danger: #d95d56 !important;
+}
+
+#app .agri-page :is(.surface-card, .filter-card, .metric-item, .status-card,
+  .risk-overview-card, .alert-item, .table-panel) {
+  border-color: rgba(74, 128, 82, 0.18) !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(43, 87, 55, 0.07) !important;
+}
+
+#app .agri-page :is(.metric-icon, .scope-pill, .risk-overview-icon,
+  .alert-level-box, .risk-safe-ring, .record-health) {
+  background: #edf5ee !important;
+}
+
+#app .agri-page .ambient {
+  opacity: 0.18 !important;
+}
+
+#app .agri-page .filter-card :is(.el-input__wrapper, .el-select__wrapper, .el-date-editor.el-input__wrapper),
+#app .agri-page .record-toolbar :is(.el-input__wrapper, .el-select__wrapper),
+#app .agri-page .filter-card .el-button:not(.el-button--primary),
+#app .agri-page .record-toolbar .el-button:not(.el-button--primary) {
+  color: #3f5948 !important;
+  border-color: #d7e4d8 !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 1px #d7e4d8 inset !important;
+}
+
+#app .agri-page .filter-card .el-button--primary,
+#app .agri-page .record-toolbar .el-button--primary {
+  color: #ffffff !important;
+  border-color: #2f7d4a !important;
+  background: linear-gradient(145deg, #4f9a5a, #2f7d4a) !important;
+}
+
+#app .agri-page :is(.image-stage, .detection-result, .field-map, .map-legend,
+  .stage-item, .stage-item span, .score-ring, .rank) {
+  color: #3f5948 !important;
+  border-color: rgba(74, 128, 82, 0.18) !important;
+  background: #f3f8f2 !important;
+}
+
+#app .agri-page .field-map::before {
+  background-image:
+    linear-gradient(rgba(74, 128, 82, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 128, 82, 0.10) 1px, transparent 1px) !important;
+}
+
+#app .agri-page :is(.upload-empty, .upload-empty strong, .result-head span,
+  .result-head strong, .detection-result dt, .detection-result dd) {
+  color: #3f5948 !important;
+}
+
+/* 地图页 */
+#app .agri-map-page {
+  color: #3f5948 !important;
+  background: #f4f8f3 !important;
+}
+
+#app .agri-map-page :is(.page-header, .map-panel, .info-card) {
+  color: #3f5948 !important;
+  border-color: rgba(74, 128, 82, 0.18) !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(43, 87, 55, 0.07) !important;
+}
+
+#app .agri-map-page :is(.eyebrow, .base-location .el-icon) {
+  color: #2f7d4a !important;
+}
+
+#app .agri-map-page :is(.legend-group, .base-location, .task-progress, .task-meta,
+  .data-note, .plot-row small, .base-metrics span, .base-metrics small,
+  .detail-grid span, .plot-di span) {
+  color: #718177 !important;
+}
+
+#app .agri-map-page :is(.base-metrics, .plot-row, .detail-grid div) {
+  color: #3f5948 !important;
+  border-color: #dce8dc !important;
+  background: #f6f9f5 !important;
+}
+
+#app .agri-map-page .plot-row:hover,
+#app .agri-map-page .plot-row.active {
+  border-color: #6fae7c !important;
+  background: #edf5ee !important;
+}
+
+#app .agri-map-page .leaflet-map,
+#app .agri-map-page .leaflet-container {
+  background: #eef5ee !important;
+}
+
+#app .agri-map-page .base-select .el-select__wrapper {
+  color: #3f5948 !important;
+  border-color: #d7e4d8 !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 1px #d7e4d8 inset !important;
+}
+
+#app .agri-map-page .leaflet-control-zoom a,
+#app .agri-map-page .leaflet-control-attribution,
+#app .agri-map-page .plot-label {
+  color: #3f5948 !important;
+  border-color: #d7e4d8 !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+}
+
+/* 登录与注册 */
+#app .login-page,
+#app .register {
+  --primary: #2f7d4a !important;
+  --primary-deep: #24653b !important;
+  --text-main: #183322 !important;
+  --text-secondary: #3f5948 !important;
+  --text-muted: #718177 !important;
+  color: #3f5948 !important;
+  background: url("@/assets/images/bgn.png") center center / cover no-repeat fixed !important;
+}
+
+#app .login-page .scene-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(239, 247, 239, 0.16) 0%,
+      rgba(255, 255, 255, 0.06) 48%,
+      rgba(234, 244, 235, 0.18) 100%
+    ) !important;
+}
+
+#app .login-page .scene-grid {
+  opacity: 0.06 !important;
+  background-image:
+    linear-gradient(rgba(47, 125, 74, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 125, 74, 0.10) 1px, transparent 1px) !important;
+}
+
+#app .login-page .login-card,
+#app .register .register-form {
+  color: #3f5948 !important;
+  border-color: rgba(74, 128, 82, 0.22) !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  box-shadow: 0 24px 70px rgba(43, 87, 55, 0.16) !important;
+}
+
+#app .login-page :is(.login-title-group h2, .login-title-group p, .form-label,
+  .security-note p, .login-footer, .login-eyebrow) {
+  color: #3f5948 !important;
+}
+
+#app .login-page .brand-mark {
+  border-color: rgba(47, 125, 74, 0.28) !important;
+  background: #edf5ee !important;
+  box-shadow: none !important;
+}
+
+#app .login-page .login-input .el-input__wrapper,
+#app .login-page .captcha-image-wrap {
+  color: #3f5948 !important;
+  border-color: #d7e4d8 !important;
+  background: #f8fbf7 !important;
+  box-shadow: 0 0 0 1px #d7e4d8 inset !important;
+}
+
+#app .login-page .login-button {
+  color: #ffffff !important;
+  border-color: #2f7d4a !important;
+  background: linear-gradient(145deg, #4f9a5a, #2f7d4a) !important;
+  box-shadow: 0 10px 22px rgba(47, 125, 74, 0.22) !important;
+}
+
+#app .login-page .login-footer {
+  color: #718177 !important;
+  background: linear-gradient(180deg, transparent, rgba(237, 245, 236, 0.86)) !important;
+}
+
+/* 文件、模型与任务详情中的旧深色信息块。 */
+#app :is(.log-content, .preview-container, .selected-preview, .task-item) {
+  color: #3f5948 !important;
+  border-color: #dce8dc !important;
+  background: #f6f9f5 !important;
+}
+
+#app :is(.log-content, .preview-container, .selected-preview) :is(code, pre, span, div) {
+  color: #3f5948 !important;
+}
+
+body [style*="background: rgba(3, 20, 34, 0.9)"],
+body [style*="background:rgba(3,20,34,.9)"] {
+  color: #3f5948 !important;
+  border-color: #dce8dc !important;
+  background: #f6f9f5 !important;
+}
+
+#app .el-tree-node:focus > .el-tree-node__content,
+#app .el-tree-node__content:hover {
+  background: #edf5ee !important;
+}
+
+/* 滚动条 */
+*::-webkit-scrollbar-track {
+  background: #eef4ee !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(79, 154, 90, 0.34) !important;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(47, 125, 74, 0.50) !important;
+}
+
+/* 后台农业绿增强：仅覆盖颜色，不调整任何结构和尺寸。 */
+#app .top-layout {
+  --el-color-primary: #087a3e;
+  --agri-screen-bg: #dff0e3;
+  --agri-panel-soft: #e8f5eb;
+  --agri-border: rgba(8, 122, 62, 0.28);
+  background: #dff0e3 !important;
+}
+
+#app .top-layout .navbar {
+  color: #ffffff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.16) !important;
+  background: linear-gradient(100deg, #075f34 0%, #087a3e 55%, #159553 100%) !important;
+  box-shadow: 0 7px 24px rgba(5, 87, 43, 0.24) !important;
+}
+
+#app .top-layout .navbar :is(.brand-title, .clock, .clock span, .user-name, .avatar-wrapper),
+#app .top-layout .navbar :is(.el-icon, .svg-icon) {
+  color: #ffffff !important;
+}
+
+#app .top-layout .navbar .avatar-wrapper {
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+#app .top-layout .agri-top-menu,
+#app .top-layout .agri-top-menu.el-menu,
+#app .top-layout .agri-top-menu .el-menu-item,
+#app .top-layout .agri-top-menu .el-sub-menu__title {
+  color: rgba(255, 255, 255, 0.88) !important;
+  background: transparent !important;
+}
+
+#app .top-layout .agri-top-menu .el-menu-item:hover,
+#app .top-layout .agri-top-menu .el-menu-item.is-active,
+#app .top-layout .agri-top-menu .el-sub-menu__title:hover,
+#app .top-layout .agri-top-menu .el-sub-menu.is-active .el-sub-menu__title,
+#app .top-layout .agri-top-menu .el-sub-menu.is-opened .el-sub-menu__title {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+#app .top-layout :is(.main-container, .app-main, .app-container, .agri-page, .agri-business-page) {
+  background: #dff0e3 !important;
+  background-color: #dff0e3 !important;
+}
+
+#app .top-layout :is(.agri-platform-ribbon, .agri-page-header) {
+  border-color: rgba(8, 122, 62, 0.26) !important;
+  background: linear-gradient(100deg, #ffffff 0%, #d9efdf 100%) !important;
+  box-shadow: 0 8px 24px rgba(6, 105, 52, 0.11) !important;
+}
+
+#app .top-layout :is(.el-card, .panel-card, .content-card) {
+  border-color: rgba(8, 122, 62, 0.24) !important;
+  box-shadow: 0 9px 25px rgba(6, 105, 52, 0.09) !important;
+}
+
+#app .top-layout :is(.el-card__header, .panel-header, .section-header) {
+  border-bottom-color: rgba(8, 122, 62, 0.18) !important;
+  background: #edf8f0 !important;
+}
+
+/* Data center file browser: keep the folder canvas consistent with the light business theme. */
+#app .top-layout .agri-business-page .drawing_card.el-card,
+#app .top-layout .agri-business-page .drawing_card,
+#app .agri-business-page .drawing_card.el-card,
+#app .agri-business-page .drawing_card {
+  color: #244633 !important;
+  border-color: rgba(8, 122, 62, 0.24) !important;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(47, 125, 74, 0.10), transparent 34%),
+    linear-gradient(145deg, #f8fdf9 0%, #e9f7ed 100%) !important;
+  background-color: #eef8f1 !important;
+  box-shadow: 0 12px 30px rgba(6, 105, 52, 0.10) !important;
+}
+
+#app .top-layout .agri-business-page .drawing_card.el-card > .el-card__body,
+#app .agri-business-page .drawing_card.el-card > .el-card__body {
+  min-height: 620px;
+  color: #244633 !important;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(47, 125, 74, 0.08), transparent 34%),
+    linear-gradient(145deg, #f8fdf9 0%, #e9f7ed 100%) !important;
+  background-color: #eef8f1 !important;
+}
+
+#app .top-layout .agri-business-page .drawing_card :is(.folderWrapper, .folderContainer),
+#app .agri-business-page .drawing_card :is(.folderWrapper, .folderContainer) {
+  background: transparent !important;
+}
+
+#app .top-layout .agri-business-page .drawing_card .folderWrapper:hover,
+#app .agri-business-page .drawing_card .folderWrapper:hover {
+  background: rgba(47, 125, 74, 0.09) !important;
+}
+
+#app .top-layout .agri-business-page .drawing_card .folderName,
+#app .agri-business-page .drawing_card .folderName {
+  color: #16683b !important;
+  font-weight: 700;
+}
+
+#app .top-layout .agri-business-page .drawing_card .folderTime,
+#app .agri-business-page .drawing_card .folderTime,
+#app .top-layout .agri-business-page .drawing_card .el-empty__description,
+#app .agri-business-page .drawing_card .el-empty__description {
+  color: #6f8376 !important;
+}

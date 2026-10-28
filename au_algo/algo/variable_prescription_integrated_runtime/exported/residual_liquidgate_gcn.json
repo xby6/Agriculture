@@ -1,0 +1,24 @@
+{
+  "format": "torchscript",
+  "input_name": "patches",
+  "input_shape": [
+    "batch",
+    8,
+    9
+  ],
+  "input_dtype": "float32",
+  "output": "disease_heat_class",
+  "output_shape": [
+    "batch"
+  ],
+  "output_dtype": "int64",
+  "output_range": [
+    0,
+    3
+  ],
+  "output_formula": "argmax(logits)",
+  "normalization": "integer rasters are divided by their dtype maximum",
+  "model": "ResidualLiquidGateGCN + argmax heat-map wrapper",
+  "hidden_dim": 72,
+  "num_classes": 4
+}

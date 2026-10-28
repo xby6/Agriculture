@@ -1,0 +1,126 @@
+// Base palette
+$blue: #198f4b;
+$light-blue: #5caf78;
+$red: #d95d56;
+$pink: #c56f88;
+$green: #2aa65f;
+$tiffany: #5ea98a;
+$yellow: #d7a12e;
+$panGreen: #2aa65f;
+
+// Menu palette
+$menuText: #3f5948;
+$menuActiveText: #116f39;
+$menuBg: #ffffff;
+$menuHover: rgba(25, 143, 75, 0.13);
+
+// Light theme fallbacks
+$menuLightBg: #ffffff;
+$menuLightHover: rgba(25, 143, 75, 0.13);
+$menuLightText: #3f5948;
+$menuLightActiveText: #116f39;
+
+// Layout sizing
+$base-sidebar-width: 0px;
+$sideBarWidth: 0px;
+
+// Legacy sidebar variables kept for compatibility
+$base-menu-color: #3f5948;
+$base-menu-color-active: #24653b;
+$base-menu-background: #ffffff;
+$base-sub-menu-background: #f4f8f3;
+$base-sub-menu-hover: rgba(47, 125, 74, 0.10);
+
+// Element theme colors
+$--color-primary: #198f4b;
+$--color-success: #2aa65f;
+$--color-warning: #d7a12e;
+$--color-danger: #d95d56;
+$--color-info: #718177;
+
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  menuLightBg: $menuLightBg;
+  menuLightHover: $menuLightHover;
+  menuLightText: $menuLightText;
+  menuLightActiveText: $menuLightActiveText;
+  sideBarWidth: $sideBarWidth;
+  blue: $blue;
+  lightBlue: $light-blue;
+  red: $red;
+  pink: $pink;
+  green: $green;
+  tiffany: $tiffany;
+  yellow: $yellow;
+  panGreen: $panGreen;
+  colorPrimary: $--color-primary;
+  colorSuccess: $--color-success;
+  colorWarning: $--color-warning;
+  colorDanger: $--color-danger;
+  colorInfo: $--color-info;
+}
+
+:root {
+  --sidebar-bg: #{$menuBg};
+  --sidebar-text: #{$menuText};
+  --menu-hover: #{$menuHover};
+
+  --navbar-bg: #ffffff;
+  --navbar-text: #294633;
+  --navbar-hover: rgba(47, 125, 74, 0.10);
+
+  --agri-page-bg: #edf7ef;
+  --agri-panel-bg: #ffffff;
+  --agri-border: rgba(74, 128, 82, 0.18);
+  --agri-primary: #2aa65f;
+  --agri-primary-strong: #198f4b;
+  --agri-success: #2aa65f;
+  --agri-warning: #d7a12e;
+  --agri-danger: #d95d56;
+  --agri-text: #183322;
+  --agri-muted: #718177;
+
+  --el-color-primary: #198f4b;
+  --el-color-primary-light-3: #6fae7c;
+  --el-color-primary-light-5: #97c39f;
+  --el-color-primary-light-7: #c0d9c4;
+  --el-color-primary-light-8: #d7e6d9;
+  --el-color-primary-light-9: #edf5ee;
+  --el-color-primary-dark-2: #116f39;
+
+  --splitpanes-default-bg: #f4f8f3;
+}
+
+html.dark {
+  color-scheme: light;
+  --el-bg-color: #ffffff;
+  --el-bg-color-overlay: #ffffff;
+  --el-text-color-primary: #183322;
+  --el-text-color-regular: #3f5948;
+  --el-border-color: #d7e4d8;
+  --el-border-color-light: #e5eee5;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #3f5948;
+  --menu-active-text: #24653b;
+  --navbar-bg: #ffffff;
+  --navbar-text: #294633;
+  --navbar-hover: rgba(47, 125, 74, 0.10);
+  --tags-bg: #ffffff;
+  --tags-item-bg: #f4f8f3;
+  --tags-item-border: #dce8dc;
+  --tags-item-text: #3f5948;
+  --tags-item-hover: rgba(47, 125, 74, 0.10);
+  --tags-close-hover: rgba(47, 125, 74, 0.14);
+  --splitpanes-bg: #f4f8f3;
+  --splitpanes-border: #dce8dc;
+  --splitpanes-splitter-bg: #edf4ed;
+  --splitpanes-splitter-hover-bg: #dfece0;
+  --blockquote-bg: #f4f8f3;
+  --blockquote-border: #dce8dc;
+  --blockquote-text: #3f5948;
+  --cron-border: #dce8dc;
+  --splitpanes-default-bg: #f4f8f3;
+}

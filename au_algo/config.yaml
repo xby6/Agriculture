@@ -1,0 +1,21 @@
+algorithms:
+  RiceDiseasePyramidYOLOv8Algorithm:
+    args: '{"model_name": "pyramid_yolov8_rice_disease_best.pt", "conf": 0.25, "iou": 0.45, "imgsz": 640, "line_width": 3, "save_txt": true, "save_conf": true, "device": ""}'
+    args_intro: '{"model_name": "模型名称，对应 model_config.yaml 中的模型键名", "conf": "目标置信度阈值，建议 0.1-0.7", "iou": "NMS IoU 阈值，建议 0.3-0.7", "imgsz": "推理输入尺寸，默认 640", "line_width": "结果图检测框线宽", "save_txt": "是否输出标签 txt", "save_conf": "标签 txt 是否包含置信度", "device": "推理设备，空为自动；可填 cpu、0、cuda:0"}'
+    file: algo/RiceDiseasePyramidYOLOv8Algorithm.py
+    intro: 水稻病害 Pyramid-YOLOv8 目标检测算法，使用训练好的 best.pt 权重，对上传图片进行病斑/病害目标检测，并输出标注图片、标签、CSV、JSON 与汇总报告。
+  RiceDiseaseRoYOLOv8PKIAlgorithm:
+    args: '{"model_name": "ro_yolov8_pki_best.pt", "conf": 0.25, "iou": 0.45, "imgsz": 640, "line_width": 3, "save_txt": true, "save_conf": true, "device": ""}'
+    args_intro: '{"model_name": "模型名称，对应 model_config.yaml 中的模型键名", "conf": "目标置信度阈值，建议 0.1-0.7", "iou": "NMS IoU 阈值，建议 0.3-0.7", "imgsz": "推理输入尺寸，默认 640", "line_width": "结果图检测框线宽", "save_txt": "是否输出标签 txt", "save_conf": "标签 txt 是否包含置信度", "device": "推理设备，空为自动；可填 cpu、0、cuda:0"}'
+    file: algo/RiceDiseaseRoYOLOv8PKIAlgorithm.py
+    intro: 水稻病害 Ro-YOLOv8-PKI 旋转框目标检测算法，使用训练好的 best.pt 权重，对上传图片进行病斑/病害目标检测，并输出标注图片、标签、CSV、JSON 与汇总报告。
+  VariablePrescriptionIntegratedAlgorithm:
+    args: '{"model_name": "variable_prescription_residual_liquidgate_gcn.pt", "device": "cpu", "tile_size": 256, "batch_size": 4096, "stride": 3, "resolution": 1024, "shrink_radius": 1, "minimum_field_area": 300, "max_erosion": 12, "save_visual_steps": true, "visualization_dpi": 120}'
+    args_intro: '{"model_name": "模型名称，对应 model_config.yaml 中的 TorchScript 模型键名", "device": "推理设备，建议 cpu；有 CUDA 时可填 cuda", "tile_size": "热力图分块推理尺寸", "batch_size": "热力图批量推理样本数，内存不足时调小", "stride": "3x3 patch 回填步长，默认 3", "resolution": "处方图输出栅格尺寸，默认 1024", "shrink_radius": "中度边缘压缩半径", "minimum_field_area": "最小田块像元面积", "max_erosion": "田块分割最大腐蚀次数", "save_visual_steps": "是否输出处方构建过程图", "visualization_dpi": "过程图 DPI"}'
+    file: algo/VariablePrescriptionIntegratedAlgorithm.py
+    intro: 变量施药处方图一体化算法，输入 8 波段 GeoTIFF，先生成病害类别热力图，再构建像元级与田块级变量喷施处方图，输出 GeoTIFF、PNG、CSV、过程图和汇总报告。
+  algorithm:
+    args: '{}'
+    args_intro: '{}'
+    file: algo/algorithm.py.py
+    intro: this is test
